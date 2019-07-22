@@ -24,8 +24,7 @@ public class Usuario {
 		
 	}
 
-	public Usuario(int idUsuario, String nombre, String correo, String password) {
-		this.idUsuario = idUsuario;
+	public Usuario(String nombre, String correo, String password) {
 		this.nombre = nombre;
 		this.correo = correo;
 		this.password = password;

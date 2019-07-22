@@ -11,6 +11,6 @@
     <property name="connection.password">12345</property>
     <property name="show_sql">true</property>
         
-    <mapping class="mx.com.proyecti.entity.Employee" />
+    <mapping class="mx.com.myInventory.entity.Usuario" />
   </session-factory>
 </hibernate-configuration>
