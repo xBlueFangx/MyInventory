@@ -14,10 +14,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="Compra")
+/*@Entity
+@Table(name="Compra")*/
 public class Compra {
-	@Id
+	/*@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(nullable=false, updatable=false)
 	private int idCompra;
@@ -87,5 +87,5 @@ public class Compra {
     @Override
     public int hashCode() {
         return Objects.hash(idCompra, fecha, proveedor);
-    }
+    }*/
 }

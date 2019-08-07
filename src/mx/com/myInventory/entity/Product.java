@@ -15,7 +15,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Producto")
-public class Producto {
+public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(nullable=false, updatable=false)
@@ -32,7 +32,7 @@ public class Producto {
 	
 	@Column(nullable=false)
 	private int existencia;
-	
+	/*
 	@OneToMany(
 				mappedBy ="Producto",
 				cascade = CascadeType.ALL,
@@ -41,18 +41,18 @@ public class Producto {
 	private List<VentaProducto> ventas = new ArrayList<>();
 	
 	@OneToMany(
-				mappedBy = "Producto",
+				mappedBy ="Producto",
 				cascade = CascadeType.ALL,
 				orphanRemoval = true
 			)
-	private List<CompraProducto> compras = new ArrayList<>();	
+	private List<CompraProducto> compras = new ArrayList<>();	*/
 	
 	
-	public Producto() {
+	public Product() {
 		
 	}
 
-	public Producto(int idProducto, String nombre, String etiqueta, String numero, int existencia) {
+	public Product(int idProducto, String nombre, String etiqueta, String numero, int existencia) {
 		this.idProducto = idProducto;
 		this.nombre = nombre;
 		this.etiqueta = etiqueta;
@@ -99,7 +99,7 @@ public class Producto {
 	public void setExistencia(int existencia) {
 		this.existencia = existencia;
 	}
-	
+	/*
 	public List<VentaProducto> getVentas() {
 		return ventas;
 	}
@@ -114,7 +114,7 @@ public class Producto {
 
 	public void setCompras(List<CompraProducto> compras) {
 		this.compras = compras;
-	}
+	}*/
 
 	@Override
     public boolean equals(Object o) {
@@ -124,7 +124,7 @@ public class Producto {
         if (o == null || getClass() != o.getClass())
         	return false;
         
-        Producto producto = (Producto) o;
+        Product producto = (Product) o;
         return Objects.equals(idProducto, producto.getIdProducto());
     }
  

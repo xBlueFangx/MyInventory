@@ -7,11 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+/*
 @Entity
-@Table(name="CompraProducto")
+@Table(name="CompraProducto")*/
 public class CompraProducto {
-	@EmbeddedId
+	/*@EmbeddedId
 	private CompraProductoId id;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -80,5 +80,5 @@ public class CompraProducto {
     @Override
     public int hashCode() {
         return Objects.hash(compra, producto);
-    }
+    }*/
 }

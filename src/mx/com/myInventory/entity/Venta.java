@@ -14,10 +14,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="Venta")
+/*@Entity
+@Table(name="Venta")*/
 public class Venta {
-	@Id
+	/*@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(updatable=false, nullable=false)
 	private int idVenta;
@@ -126,5 +126,5 @@ public class Venta {
     @Override
     public int hashCode() {
         return Objects.hash(idVenta, fecha, nombreCliente);
-    }
+    }*/
 }

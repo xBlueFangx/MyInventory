@@ -6,9 +6,9 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-@Embeddable
+//@Embeddable
 public class VentaProductoId implements Serializable{
-	@Column(name="Venta_idVenta")
+	/*@Column(name="Venta_idVenta")
 	private int idVenta;
 	@Column(name="Producto_idProducto")
 	private int idProducto;
@@ -55,5 +55,5 @@ public class VentaProductoId implements Serializable{
 	@Override
 	public int hashCode() {
        return Objects.hash(idVenta, idProducto);
-   }
+   }*/
 }

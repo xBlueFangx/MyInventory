@@ -1,4 +1,4 @@
-package mx.com.myInventory.entity;
+	package mx.com.myInventory.entity;
 
 import java.util.Objects;
 
