@@ -27,7 +27,7 @@ public class ProductDAOImpl implements ProductDAO{
 	@Override
 	public Product readProduct(int id) {
 		Session session = sessionFactory.getCurrentSession();
-		return (Product) session.load(Product.class, new Integer(id));
+		return (Product) session.get(Product.class, new Integer(id));//Load no funcionó
 		
 	}
 	
@@ -40,7 +40,7 @@ public class ProductDAOImpl implements ProductDAO{
 	@Override
 	public void deleteProduct(int id) {
 		Session session = sessionFactory.getCurrentSession();
-		Product p = (Product)session.load(Product.class, new Integer(id));
+		Product p = (Product)session.get(Product.class, new Integer(id));//Load no funcionó
 		if(p!=null)
 			session.delete(p);
 	}
@@ -49,7 +49,7 @@ public class ProductDAOImpl implements ProductDAO{
 	@Override
 	public List<Product> listProducts() {
 		Session session = sessionFactory.getCurrentSession();
-		return (List<Product>)session.createQuery("from Producto").list();
+		return (List<Product>)session.createQuery("from Product").list();
 	}
 	
 }

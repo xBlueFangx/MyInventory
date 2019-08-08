@@ -12,7 +12,7 @@
     <property name="show_sql">true</property>
         
     <mapping class="mx.com.myInventory.entity.Usuario" />
-    <mapping class="mx.com.myInventory.entity.Producto" />
+    <mapping class="mx.com.myInventory.entity.Product" />
     
   </session-factory>
 </hibernate-configuration>

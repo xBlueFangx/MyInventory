@@ -1,16 +1,12 @@
 package mx.com.myInventory.entity;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,20 +14,20 @@ import javax.persistence.Table;
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Column(nullable=false, updatable=false)
-	private int idProducto;
+	@Column(name="idProducto", nullable=false, updatable=false)
+	private int id;
 	
-	@Column(nullable=false)
-	private String nombre;
+	@Column(name="nombre", nullable=false)
+	private String name;
 	
-	@Column(nullable=false)
-	private String etiqueta;
+	@Column(name="etiqueta", nullable=false)
+	private String tag;
 	
-	@Column(nullable=false)
-	private String numero;
+	@Column(name="numero", nullable=false)
+	private String number;
 	
-	@Column(nullable=false)
-	private int existencia;
+	@Column(name="existencia", nullable=false)
+	private int amount;
 	/*
 	@OneToMany(
 				mappedBy ="Producto",
@@ -52,53 +48,54 @@ public class Product {
 		
 	}
 
-	public Product(int idProducto, String nombre, String etiqueta, String numero, int existencia) {
-		this.idProducto = idProducto;
-		this.nombre = nombre;
-		this.etiqueta = etiqueta;
-		this.numero = numero;
-		this.existencia = existencia;
+	public Product(int id, String name, String tag, String number, int amount) {
+		this.id = id;
+		this.name = name;
+		this.tag = tag;
+		this.number = number;
+		this.amount = amount;
 	}
 
-	public int getIdProducto() {
-		return idProducto;
+	public int getId() {
+		return id;
 	}
 
-	public void setIdProducto(int idProducto) {
-		this.idProducto = idProducto;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getEtiqueta() {
-		return etiqueta;
+	public String getTag() {
+		return tag;
 	}
 
-	public void setEtiqueta(String etiqueta) {
-		this.etiqueta = etiqueta;
+	public void setTag(String tag) {
+		this.tag = tag;
 	}
 
-	public String getNumero() {
-		return numero;
+	public String getNumber() {
+		return number;
 	}
 
-	public void setNumero(String numero) {
-		this.numero = numero;
+	public void setNumber(String number) {
+		this.number = number;
 	}
 
-	public int getExistencia() {
-		return existencia;
+	public int getAmount() {
+		return amount;
 	}
 
-	public void setExistencia(int existencia) {
-		this.existencia = existencia;
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
+	
 	/*
 	public List<VentaProducto> getVentas() {
 		return ventas;
@@ -124,12 +121,12 @@ public class Product {
         if (o == null || getClass() != o.getClass())
         	return false;
         
-        Product producto = (Product) o;
-        return Objects.equals(idProducto, producto.getIdProducto());
+        Product product = (Product) o;
+        return Objects.equals(id, product.getId());
     }
  
     @Override
     public int hashCode() {
-        return Objects.hash(idProducto);
+        return Objects.hash(id);
     }
 }
