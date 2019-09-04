@@ -16,8 +16,14 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(nullable=false, updatable=false)
 	private int idUsuario;
+	
+	@Column(nullable=false)
 	private String nombre;
+	
+	@Column(nullable=false, unique=true)
 	private String correo;
+	
+	@Column(nullable=false)
 	private String password;
 	
 	public Usuario() {

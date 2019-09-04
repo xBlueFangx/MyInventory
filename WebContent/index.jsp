@@ -19,9 +19,11 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="/MyInventory">Inicio
+				<li class="nav-item active">
+					<a class="nav-link" href="/MyInventory">Inicio
 						<span class="sr-only">(current)</span>
-				</a></li>
+					</a>
+				</li>
 				<li class="nav-item"><a class="nav-link" href="/MyInventory/products">Productos</a></li>
 			</ul>
 		</div>
@@ -29,7 +31,25 @@
 	<section class="container">
 		<div class="row">
 			<div class="col-md-6 offset-3">
-				ashdbiouasbdasdboa
+				<div class="card" style="margin-top:30%">	
+					<div class="card-body">
+						<form action="">
+							<h1 class="h3 mb-3 font-weight-normal" style="text-align:center">Iniciar Sesión</h1>
+							
+							<div class="form-group">
+								<label for="email">Correo Electrónico</label>
+								<input type="text" class="form-control" name="email" id="email">
+							</div>
+							<div class="form-group">
+								<label for="password">Contraseña</label>
+								<input type="password" class="form-control" name="password" id="password">
+							</div>
+							<button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i>Iniciar</button>
+							
+							<a href="#" id="forgot_pswd" >¿Olvidaste tu contraseña?</a>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
